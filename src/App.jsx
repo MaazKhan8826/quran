@@ -16,8 +16,8 @@ function App() {
 
   return (
     <userContext.Provider value={{ setPage, languages, langCode, setLangCode, setLoadChapter, loadChapter }} >
-      <div className="App">
-        <h1>The Holy Quran</h1>
+      <div className="App flex flex-col place-items-center min-h-screen h-fit bg-teal-700 font-sans">
+        <h1 className='text-white text-4xl mt-4 font-bold'>The Holy Quran</h1>
         {page === "language" ? languages && <FirstPage /> : null}   
         {page === "chapters" ? <Chapters /> : null}
         {page === "verses" ? <Verses /> : null}   
